@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth; // Baþlangýçta düþmanýn saðlýk deðeri maksimum saðlýk deðerine eþit olacak
         animator = GetComponent<Animator>();
         _followPlayer = GetComponent<FollowPlayer>();
+        
     }
 
     public void TakeDamage(int damage)
@@ -30,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
         
         animator.SetTrigger("Die");
         GetComponent<FollowPlayer>().enabled = false;
+        
         
     }
 

@@ -1,18 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class ZombieHealthBar : MonoBehaviour
 {
-    private PlayerHealth playerHealth; // PlayerHealth sýnýfýna eriþim saðlamak için referans
+    private EnemyHealth _enemyHealth; // EnemyHealth sýnýfýna eriþim saðlamak için referans
     [SerializeField] private Image healthBarFill; // Saðlýk çubuðunu dolduracak olan Image referansý
     [SerializeField] private Gradient healthGradient; // Saðlýk çubuðunun rengini belirlemek için gradient referansý
+    
+    
 
+
+   
     void Start()
     {
-        // Eðer playerHealth referansý atanmamýþsa, sahnedeki Player objesinden PlayerHealth bileþenini bul
-        if (playerHealth == null)
+        // Eðer enemyHealth referansý atanmamýþsa, sahnedeki Player objesinden PlayerHealth bileþenini bul
+        if (_enemyHealth == null)
         {
-            playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+            _enemyHealth = GameObject.FindGameObjectWithTag("Zombie").GetComponent<EnemyHealth>();
         }
 
         // Health bar'ýn doldurma kýsmýnýn referansý atanmamýþsa, bu obje altýndaki Image bileþenini bul
@@ -22,19 +26,24 @@ public class HealthBar : MonoBehaviour
         }
 
         // Saðlýk çubuðunun baþlangýç rengini ayarla
-        UpdateHealthBar();
+        UpdateStaminaBar();
     }
 
     void Update()
     {
         // Her güncellemede saðlýk çubuðunu güncelle
-        UpdateHealthBar();
+        UpdateStaminaBar();
+
+        
+
+
+
     }
 
-    void UpdateHealthBar()
+    void UpdateStaminaBar()
     {
         // Oyuncunun maksimum ve mevcut saðlýk deðerlerine göre saðlýk çubuðunun doluluk oranýný hesapla
-        float fillAmount = (float)playerHealth.currentHealth / playerHealth.maxHealth;
+        float fillAmount = (float)_enemyHealth.currentHealth / _enemyHealth.maxHealth;
         // Saðlýk çubuðunun doluluk oranýný güncelle
         healthBarFill.fillAmount = fillAmount;
 
