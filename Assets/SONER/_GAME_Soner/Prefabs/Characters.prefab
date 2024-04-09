@@ -758,11 +758,11 @@ GameObject:
   - component: {fileID: 8681031780160342892}
   - component: {fileID: 1362193828345203773}
   - component: {fileID: 7220700232376642971}
-  - component: {fileID: 1534893986055053378}
-  - component: {fileID: 8821605859596469801}
-  - component: {fileID: 2611831024785899855}
-  - component: {fileID: 169117809223461996}
-  - component: {fileID: 226496295239166780}
+  - component: {fileID: 4987866508256696399}
+  - component: {fileID: 5201196542372727498}
+  - component: {fileID: 4436725949418711651}
+  - component: {fileID: 4516333648864340739}
+  - component: {fileID: 4997512693636140715}
   m_Layer: 0
   m_Name: Raider
   m_TagString: Player
@@ -967,7 +967,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1534893986055053378
+--- !u!114 &4987866508256696399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -979,20 +979,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf72a223bd0595a4bb9db534fecaff4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.5
-  bulletPoint: {fileID: 3362689894224402310}
-  bullets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &8821605859596469801
+  attackCooldown: 0
+  bulletPoint: {fileID: 0}
+  bullets: []
+--- !u!114 &5201196542372727498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1004,15 +994,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3e85f26ec6cb547a67e7dc8022dd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2
   horizontalInput: 0
-  jumpPower: 4
+  jumpPower: 3
   boostSpeed: 5
   energy: 100
   energyDepletionRate: 20
-  energyRegenRate: 2
-  maxEnergy: 100
---- !u!114 &2611831024785899855
+  energyRegenRate: 10
+  maxEnergy: 50
+--- !u!114 &4436725949418711651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1026,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   currentHealth: 0
---- !u!114 &169117809223461996
+--- !u!114 &4516333648864340739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1042,8 +1032,8 @@ MonoBehaviour:
   healthGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 1, b: 0, a: 1}
-    key2: {r: 0, g: 1, b: 0, a: 0}
+    key1: {r: 1, g: 0.9324324, b: 0, a: 1}
+    key2: {r: 0.22115791, g: 1, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1069,7 +1059,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
---- !u!114 &226496295239166780
+--- !u!114 &4997512693636140715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1085,16 +1075,16 @@ MonoBehaviour:
   staminaGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 0, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key1: {r: 0.976465, g: 1, b: 0, a: 1}
+    key2: {r: 0, g: 0.9441266, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
+    ctime1: 36430
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
@@ -1110,7 +1100,7 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 2
+    m_NumColorKeys: 3
     m_NumAlphaKeys: 2
 --- !u!1 &8119489549857537359
 GameObject:

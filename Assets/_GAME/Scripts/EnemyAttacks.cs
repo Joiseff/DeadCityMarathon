@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttacks : MonoBehaviour
 {
     public int damageAmount = 10; // Sald�r� hasar�
     public float attackRange = 1.0f; // Sald�r� menzili
@@ -8,8 +8,8 @@ public class EnemyAttack : MonoBehaviour
 
     private Animator animator;
     private Transform player; // Oyuncunun pozisyonunu tutmak i�in
-    private PlayerHealth playerHealth; // Oyuncunun sa�l�k bile�eni
-    private FollowPlayer followPlayer;
+    private PlayerHealths playerHealth; // Oyuncunun sa�l�k bile�eni
+    private FollowPlayers followPlayer;
     Rigidbody2D rb;
 
 
@@ -19,8 +19,8 @@ public class EnemyAttack : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform; // Oyuncuyu bul
-        playerHealth = player.GetComponent<PlayerHealth>(); 
-        followPlayer = GetComponent<FollowPlayer>();
+        playerHealth = player.GetComponent<PlayerHealths>(); 
+        followPlayer = GetComponent<FollowPlayers>();
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class EnemyAttack : MonoBehaviour
 
         if (playerHealth.currentHealth <= 0 )
         {
-            GetComponent<FollowPlayer>().enabled = false;
+            GetComponent<FollowPlayers>().enabled = false;
 
             animator.SetTrigger("Idle");
             

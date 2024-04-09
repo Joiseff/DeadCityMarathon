@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectiles : MonoBehaviour
 {
     [SerializeField] private float speed;
     private float direction;
@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
         boxCollider.enabled = false;
         anim.SetTrigger("explode");
 
-        EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        EnemyHealths enemyHealth = collision.GetComponent<EnemyHealths>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damage); // Düþmana hasar ver

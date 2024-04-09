@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Slower : MonoBehaviour
+public class Slowers : MonoBehaviour
 {
     // Yavaþlatma katsayýsý
     
@@ -11,7 +11,7 @@ public class Slower : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Karakterin hýzýný yavaþlat
-            PlayerController player = collision.GetComponent<PlayerController>();
+            PlayerControllers player = collision.GetComponent<PlayerControllers>();
             player.moveSpeed = 0.5f;
         }
         
@@ -23,7 +23,7 @@ public class Slower : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Karakterin hýzýný yavaþlat
-            PlayerController player = collision.GetComponent<PlayerController>();
+            PlayerControllers player = collision.GetComponent<PlayerControllers>();
             player.moveSpeed = 2.0f;
         }
     }

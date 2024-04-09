@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealths : MonoBehaviour
 {
     public int maxHealth = 100; // Düþmanýn maksimum saðlýk deðeri
     public int currentHealth; // Düþmanýn mevcut saðlýk deðeri
     private Animator animator;
-    private FollowPlayer _followPlayer;
+    private FollowPlayers _followPlayer;
        
 
     void Start()
     {
         currentHealth = maxHealth; // Baþlangýçta düþmanýn saðlýk deðeri maksimum saðlýk deðerine eþit olacak
         animator = GetComponent<Animator>();
-        _followPlayer = GetComponent<FollowPlayer>();
+        _followPlayer = GetComponent<FollowPlayers>();
         
     }
 
@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
     {
         
         animator.SetTrigger("Die");
-        GetComponent<FollowPlayer>().enabled = false;
+        GetComponent<FollowPlayers>().enabled = false;
         
         
     }

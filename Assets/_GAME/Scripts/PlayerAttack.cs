@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttacks : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private GameObject[] bullets;
     private Animator anim;
-    private PlayerController playerController;
+    private PlayerControllers playerController;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerControllers>();
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         if (bullet != null)
         {
             bullet.transform.position = bulletPoint.position;
-            bullet.GetComponent<Projectile>().SetDirection(transform.localScale.x); // Mermi yönünü ayarla
+            bullet.GetComponent<Projectiles>().SetDirection(transform.localScale.x); // Mermi yönünü ayarla
             bullet.SetActive(true); // Mermiyi aktif et
         }
     }

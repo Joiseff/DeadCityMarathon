@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealths : MonoBehaviour
 {
-    private PlayerController _playerController;
-    private PlayerAttack _playerAttack;
+    private PlayerControllers _playerController;
+    private PlayerAttacks _playerAttack;
     
     
 
@@ -20,8 +20,8 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        _playerAttack = GetComponent<PlayerAttack>();
-        _playerController = GetComponent<PlayerController>(); 
+        _playerAttack = GetComponent<PlayerAttacks>();
+        _playerController = GetComponent<PlayerControllers>(); 
         
         
         currentHealth = maxHealth;
@@ -52,9 +52,9 @@ public class PlayerHealth : MonoBehaviour
 
         animator.SetTrigger("die");
 
-        GetComponent<PlayerAttack>().enabled = false;
-        GetComponent<PlayerController>().enabled = false;
-        GetComponent<PlayerHealth>().enabled = false;
+        GetComponent<PlayerAttacks>().enabled = false;
+        GetComponent<PlayerControllers>().enabled = false;
+        GetComponent<PlayerHealths>().enabled = false;
 
 
     }

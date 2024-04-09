@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollows : MonoBehaviour
 {
     public Transform target;
     public float speed;
-    private  PlayerHealth playerHealth;
+    private  PlayerHealths playerHealth;
     
     
     private Animator animator;

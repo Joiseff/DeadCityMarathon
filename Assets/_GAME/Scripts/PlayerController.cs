@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllers : MonoBehaviour
 {
     public float moveSpeed = 2.0f;
     public float horizontalInput;
