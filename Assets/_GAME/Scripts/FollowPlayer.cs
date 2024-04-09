@@ -16,6 +16,7 @@ public class FollowPlayer : MonoBehaviour
     private float jumpCooldown = 1f;
     private float jumpTimer = 0f;
     
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class FollowPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -38,28 +40,11 @@ public class FollowPlayer : MonoBehaviour
         // Düþmaný hedefe doðru hareket ettir
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
-        //if (rb.velocity.x > 0.1f)
-        //{
-        //    // Saða hareket ediyorsa sprite'ý orijinal durumuna getir 
-        //    spriteRenderer.flipX = false;
-        //}
-        //else if (rb.velocity.x < -0.1f)
-        //{
-        //    // Sola hareket ediyorsa sprite'ý tersine çevir 
-        //    spriteRenderer.flipX = true;
-        //}
+        
     }
 
     // Zýplama fonksiyonu
-    private void Jump()
-    {
-        isJumping = true;
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        jumpTimer = jumpCooldown;
-        animator.SetTrigger("Jump");
-    }
 
-    // Zýplama sonrasý cooldown süresini takip et
     private void Update()
     {
         if (isJumping)
@@ -71,8 +56,24 @@ public class FollowPlayer : MonoBehaviour
             }
         }
 
+       
+
         
+
+
     }
+    private void Jump()
+    {
+        isJumping = true;
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        jumpTimer = jumpCooldown;
+        animator.SetTrigger("Jump");
+    }
+
+   
+  
+
+
 
     
 }

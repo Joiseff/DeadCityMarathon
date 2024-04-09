@@ -170,7 +170,7 @@ TextureImporter:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 40
+        width: 53
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -187,27 +187,6 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: Shot_3
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 49
-        width: 12
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 898b4eac52982a84e98884026c58a7a4
-      internalID: 1878719229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shot_4
       rect:
         serializedVersion: 2
         x: 428
@@ -241,8 +220,7 @@ TextureImporter:
       Shot_0: 155380751
       Shot_1: 1517900639
       Shot_2: 727666015
-      Shot_3: 1878719229
-      Shot_4: 457724565
+      Shot_3: 457724565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
