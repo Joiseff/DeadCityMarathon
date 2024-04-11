@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: CanvasPause
+    uniqueID: 3495048195
+    locked: 0
