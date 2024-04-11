@@ -14,7 +14,8 @@ public class PlayerHealths : MonoBehaviour
     public int currentHealth;
     private Animator animator;
     private bool isDead = false;
-    
+    public int healthIncreaseAmount = 50;
+
 
     // Start is called before the first frame update
     void Start()
@@ -65,5 +66,26 @@ public class PlayerHealths : MonoBehaviour
         return isDead;
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Eðer temas edilen obje bir eþya ise ve etiketi "HealthItem" ise
+        if (other.CompareTag("HealthItem"))
+        {
+            // Eþyayý yok et (bu objenin sahne dýþýna çýkmasýný saðlar)
+            Destroy(other.gameObject);
+
+            // Karakterin canýný arttýr
+            currentHealth += healthIncreaseAmount;
+
+            // Eðer can maksimuma ulaþtýysa, maksimum can miktarýna sýnýrla
+            if (currentHealth > 200)
+            {
+                currentHealth = 200;
+            }
+        }
+
+        
+    }
+
+
 }

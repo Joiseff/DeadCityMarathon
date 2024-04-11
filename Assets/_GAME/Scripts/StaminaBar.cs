@@ -7,6 +7,10 @@ public class StaminaBars : MonoBehaviour
     [SerializeField] private Image staminaBarFill; // Saðlýk çubuðunu dolduracak olan Image referansý
     [SerializeField] private Gradient staminaGradient; // Saðlýk çubuðunun rengini belirlemek için gradient referansý
 
+    public int StaminaIncreaseAmount = 50;
+
+
+
     void Start()
     {
         // Eðer playerHealth referansý atanmamýþsa, sahnedeki Player objesinden PlayerHealth bileþenini bul
@@ -41,4 +45,27 @@ public class StaminaBars : MonoBehaviour
         // Doluluk oranýna göre renk gradyanýndan uygun rengi seç
         staminaBarFill.color = staminaGradient.Evaluate(fillAmount);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Eðer temas edilen obje bir eþya ise ve etiketi "HealthItem" ise
+        if (other.CompareTag("StaminaItem"))
+        {
+            // Eþyayý yok et (bu objenin sahne dýþýna çýkmasýný saðlar)
+            Destroy(other.gameObject);
+
+            // Karakterin canýný arttýr
+            playerController.energy += StaminaIncreaseAmount;
+
+            // Eðer can maksimuma ulaþtýysa, maksimum can miktarýna sýnýrla
+            if (playerController.energy > 200)
+            {
+                playerController.energy = 200;
+            }
+        }
+
+
+    }
+
+
 }

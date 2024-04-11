@@ -22,6 +22,8 @@ public class PlayerControllers : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        energy = maxEnergy;
     }
 
     private void Update()
@@ -92,6 +94,9 @@ public class PlayerControllers : MonoBehaviour
     {
         isGrounded = true;
         animator.SetBool("isJumping", !isGrounded);
+
+
+
     }
 
     public bool canAttack()
@@ -121,4 +126,10 @@ public class PlayerControllers : MonoBehaviour
 
         }
     }
+
+
+
+  
+
 }
+
