@@ -1,22 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class FollowPlayers : MonoBehaviour
 {
     public Transform target;
-    public float speed;
+    public float minSpeed = 2.0f; 
+    public float maxSpeed = 4.0f;
     public float jumpForce;
+    private float currentSpeed;
+    
+    private bool isJumping = false;
+    private float jumpCooldown = 1f;
+    private float jumpTimer = 0f;
+
     public LayerMask obstacleLayer;
     private Animator animator;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private bool isJumping = false;
-    private float jumpCooldown = 1f;
-    private float jumpTimer = 0f;
-    
-    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +36,8 @@ public class FollowPlayers : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+
+        
         // Engeli algýla ve zýpla
         if (Physics2D.Raycast(transform.position, Vector2.right, 1f, obstacleLayer) && !isJumping)
         {
@@ -38,7 +45,7 @@ public class FollowPlayers : MonoBehaviour
         }
 
         // Düþmaný hedefe doðru hareket ettir
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target.position, currentSpeed * Time.deltaTime);
 
         
     }
@@ -56,9 +63,12 @@ public class FollowPlayers : MonoBehaviour
             }
         }
 
-       
 
-        
+        currentSpeed = UnityEngine.Random.Range(minSpeed, maxSpeed);
+
+
+
+
 
 
     }
@@ -70,10 +80,10 @@ public class FollowPlayers : MonoBehaviour
         animator.SetTrigger("Jump");
     }
 
-   
+
+
   
 
 
 
-    
 }

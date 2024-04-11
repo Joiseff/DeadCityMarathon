@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6912800006466662240}
   - component: {fileID: 1315182433000167491}
   - component: {fileID: 4832800977201807759}
+  - component: {fileID: 8940019694106765295}
   m_Layer: 0
   m_Name: Police
   m_TagString: Player
@@ -262,11 +263,11 @@ MonoBehaviour:
   moveSpeed: 3
   horizontalInput: 0
   jumpPower: 4
-  boostSpeed: 5
+  boostSpeed: 6
   energy: 100
-  energyDepletionRate: 20
-  energyRegenRate: 10
-  maxEnergy: 100
+  energyDepletionRate: 15
+  energyRegenRate: 5
+  maxEnergy: 0
 --- !u!114 &1315182433000167491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +325,49 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+--- !u!114 &8940019694106765295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761381667986483081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5039092a29c973d4785ac8e1d691d397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBarFill: {fileID: 5241393914539608724}
+  staminaGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.9532509, b: 0, a: 1}
+    key2: {r: 0, g: 0.85711694, b: 1, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 386
+    ctime1: 34502
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
 --- !u!1 &2536306839042740442
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +386,7 @@ GameObject:
   - component: {fileID: 7396471658013288063}
   - component: {fileID: 1670119724596229964}
   - component: {fileID: 4494392123099497464}
+  - component: {fileID: 939926941129677330}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Player
@@ -586,11 +631,11 @@ MonoBehaviour:
   moveSpeed: 3
   horizontalInput: 0
   jumpPower: 4
-  boostSpeed: 5
+  boostSpeed: 6
   energy: 100
-  energyDepletionRate: 20
-  energyRegenRate: 10
-  maxEnergy: 100
+  energyDepletionRate: 15
+  energyRegenRate: 5
+  maxEnergy: 0
 --- !u!114 &1670119724596229964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +675,49 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 35466
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+--- !u!114 &939926941129677330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536306839042740442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5039092a29c973d4785ac8e1d691d397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBarFill: {fileID: 2687522575238847295}
+  staminaGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.9532509, b: 0, a: 1}
+    key2: {r: 0, g: 0.85711694, b: 1, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 386
+    ctime1: 34502
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -979,8 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf72a223bd0595a4bb9db534fecaff4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0
-  bulletPoint: {fileID: 0}
+  attackCooldown: 1
+  bulletPoint: {fileID: 3362689894224402310}
   bullets: []
 --- !u!114 &5201196542372727498
 MonoBehaviour:
@@ -994,14 +1082,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3e85f26ec6cb547a67e7dc8022dd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   horizontalInput: 0
-  jumpPower: 3
-  boostSpeed: 5
+  jumpPower: 4
+  boostSpeed: 6
   energy: 100
-  energyDepletionRate: 20
-  energyRegenRate: 10
-  maxEnergy: 50
+  energyDepletionRate: 15
+  energyRegenRate: 5
+  maxEnergy: 100
 --- !u!114 &4436725949418711651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1323,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2358367792436429931, guid: c813c93d440b373489f3b9f9dd928f7b, type: 3}
   m_PrefabInstance: {fileID: 2422536653763922991}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5241393914539608724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7576109823531501243, guid: c813c93d440b373489f3b9f9dd928f7b, type: 3}
+  m_PrefabInstance: {fileID: 2422536653763922991}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6770055557794819414 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8965125245198573945, guid: c813c93d440b373489f3b9f9dd928f7b, type: 3}
@@ -1471,6 +1570,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c813c93d440b373489f3b9f9dd928f7b, type: 3}
+--- !u!114 &2687522575238847295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7576109823531501243, guid: c813c93d440b373489f3b9f9dd928f7b, type: 3}
+  m_PrefabInstance: {fileID: 5505721143455456644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3459545016131108093 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8965125245198573945, guid: c813c93d440b373489f3b9f9dd928f7b, type: 3}
