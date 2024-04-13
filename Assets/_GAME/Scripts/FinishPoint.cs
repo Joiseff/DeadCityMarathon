@@ -8,8 +8,20 @@ public class FinishPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             UnlockNewLevel();
-            //Sonraki seviyeye geç.
-            SceneController.instance.NextLevel();
+
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int totalSceneCount = SceneManager.sceneCountInBuildSettings;
+
+            if (currentSceneIndex < totalSceneCount - 1)
+            {
+                // Bir sonraki sahne varsa geç
+                SceneController.instance.NextLevel();
+            }
+            else
+            {
+                // Sonraki sahne yoksa ana menüye dön
+                GoToMainMenu();
+            }
         }
     }
     void UnlockNewLevel()
@@ -20,5 +32,9 @@ public class FinishPoint : MonoBehaviour
             PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
             PlayerPrefs.Save();
         }
+    }
+    void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu"); // Ana menü sahnesine döner.
     }
 }
