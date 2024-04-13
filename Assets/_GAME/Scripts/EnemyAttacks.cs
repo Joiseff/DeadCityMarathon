@@ -54,11 +54,6 @@ public class EnemyAttacks : MonoBehaviour
             GetComponent<FollowPlayers>().enabled = false;
 
             animator.SetTrigger("Idle");
-
-            
-            
-
-
         }
     }
 
