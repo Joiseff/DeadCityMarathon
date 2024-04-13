@@ -29,8 +29,4 @@ public class FinishPoint : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-    //void GoToCredit()
-    //{
-    //    SceneManager.LoadScene("Credit"); // Credit sahnesine gider.
-    //}
 }
