@@ -17,11 +17,11 @@ public class FinishPoint : MonoBehaviour
                 // Bir sonraki sahne varsa geç
                 SceneController.instance.NextLevel();
             }
-            else
-            {
-                // Sonraki sahne yoksa ana menüye dön
-                GoToMainMenu();
-            }
+            //else
+            //{
+            //    // Sonraki sahne yoksa ana menüye dön
+            //    GoToCredit();
+            //}
         }
     }
     void UnlockNewLevel()
@@ -33,8 +33,8 @@ public class FinishPoint : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-    void GoToMainMenu()
-    {
-        SceneManager.LoadScene("Main Menu"); // Ana menü sahnesine döner.
-    }
+    //void GoToCredit()
+    //{
+    //    SceneManager.LoadScene("Credit"); // Credit sahnesine gider.
+    //}
 }
