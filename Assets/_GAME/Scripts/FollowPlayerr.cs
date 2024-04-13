@@ -42,6 +42,7 @@ public class FollowPlayers : MonoBehaviour
         if (Physics2D.Raycast(transform.position, Vector2.right, 1f, obstacleLayer) && !isJumping)
         {
             Jump();
+            AudioManager.Instance.PlaySFX("ZombieJump");
         }
 
         // Düþmaný hedefe doðru hareket ettir

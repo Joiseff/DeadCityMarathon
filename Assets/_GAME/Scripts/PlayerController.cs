@@ -37,6 +37,7 @@ public class PlayerControllers : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 Jump();
+                AudioManager.Instance.PlaySFX("CharJump");
             }
 
             if (Input.GetKeyDown(KeyCode.LeftControl) && energy >= energyDepletionRate)

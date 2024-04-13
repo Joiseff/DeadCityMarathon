@@ -34,6 +34,7 @@ public class PlayerAttacks : MonoBehaviour
             bullet.transform.position = bulletPoint.position;
             bullet.GetComponent<Projectiles>().SetDirection(transform.localScale.x); // Mermi yönünü ayarla
             bullet.SetActive(true); // Mermiyi aktif et
+            AudioManager.Instance.PlaySFX("Rifle");
         }
     }
 

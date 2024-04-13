@@ -33,6 +33,7 @@ public class EnemyAttacks : MonoBehaviour
             // Oyuncu d��man�n sald�r� menzili i�erisinde mi kontrol et
             if (Vector2.Distance(transform.position, player.position) <= attackRange && canAttack)
             {
+                AudioManager.Instance.PlaySFX("ZombieAttack");
                 // Sald�r� animasyonunu oynat
                 animator.SetTrigger("attack");
                 // Oyuncuya hasar ver

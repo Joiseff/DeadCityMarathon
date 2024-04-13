@@ -7,6 +7,7 @@ public class FinishPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.Instance.PlaySFX("Finish");
             UnlockNewLevel();
 
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -17,11 +18,6 @@ public class FinishPoint : MonoBehaviour
                 // Bir sonraki sahne varsa geç
                 SceneController.instance.NextLevel();
             }
-            //else
-            //{
-            //    // Sonraki sahne yoksa ana menüye dön
-            //    GoToCredit();
-            //}
         }
     }
     void UnlockNewLevel()
