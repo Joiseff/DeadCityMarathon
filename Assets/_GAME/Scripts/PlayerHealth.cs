@@ -7,6 +7,7 @@ public class PlayerHealths : MonoBehaviour
 {
     private PlayerControllers _playerController;
     private PlayerAttacks _playerAttack;
+    private DieMenu _dieMenu;
     
     
 
@@ -22,8 +23,8 @@ public class PlayerHealths : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         _playerAttack = GetComponent<PlayerAttacks>();
-        _playerController = GetComponent<PlayerControllers>(); 
-        
+        _playerController = GetComponent<PlayerControllers>();
+        _dieMenu = GetComponent<DieMenu>();
         
         currentHealth = maxHealth;
     }
@@ -40,6 +41,7 @@ public class PlayerHealths : MonoBehaviour
 
                 Die();
 
+               
                 
 
             }
@@ -57,6 +59,7 @@ public class PlayerHealths : MonoBehaviour
         GetComponent<PlayerControllers>().enabled = false;
         GetComponent<PlayerHealths>().enabled = false;
 
+        _dieMenu.DMenu();
 
     }
 

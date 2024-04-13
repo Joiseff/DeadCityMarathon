@@ -10,6 +10,7 @@ public class EnemyAttacks : MonoBehaviour
     private Transform player; // Oyuncunun pozisyonunu tutmak i�in
     private PlayerHealths playerHealth; // Oyuncunun sa�l�k bile�eni
     private FollowPlayers followPlayer;
+    
     Rigidbody2D rb;
 
 
@@ -21,6 +22,7 @@ public class EnemyAttacks : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform; // Oyuncuyu bul
         playerHealth = player.GetComponent<PlayerHealths>(); 
         followPlayer = GetComponent<FollowPlayers>();
+       
     }
 
     void Update()
@@ -51,8 +53,8 @@ public class EnemyAttacks : MonoBehaviour
             GetComponent<FollowPlayers>().enabled = false;
 
             animator.SetTrigger("Idle");
-            
 
+            
             
 
 
