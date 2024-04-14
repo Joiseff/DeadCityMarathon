@@ -51,6 +51,7 @@ public class StaminaBars : MonoBehaviour
         // Eðer temas edilen obje bir eþya ise ve etiketi "HealthItem" ise
         if (other.CompareTag("StaminaItem"))
         {
+            AudioManager.Instance.PlaySFX("Pickup");
             // Eþyayý yok et (bu objenin sahne dýþýna çýkmasýný saðlar)
             Destroy(other.gameObject);
 

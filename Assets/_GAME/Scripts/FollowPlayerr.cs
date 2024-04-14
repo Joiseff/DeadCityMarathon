@@ -81,6 +81,13 @@ public class FollowPlayers : MonoBehaviour
         animator.SetTrigger("Jump");
     }
 
+    private void ZombieDeadSFX()
+    {
+
+
+        AudioManager.Instance.PlaySFX("ZombieDead");
+    }
+
 
 
   

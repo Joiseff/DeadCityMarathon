@@ -128,6 +128,13 @@ public class PlayerControllers : MonoBehaviour
         }
     }
 
+    public void RunSound()
+    {
+
+
+        AudioManager.Instance.PlaySFX("Run");
+    }
+
 
 
   

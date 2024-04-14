@@ -3956,7 +3956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c9491591a7d94ea360b15b25d1224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 10
   attackRange: 2
   attackCooldown: 1
 --- !u!114 &924564501535760900
@@ -4409,7 +4409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c9491591a7d94ea360b15b25d1224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 10
   attackRange: 2
   attackCooldown: 1
 --- !u!61 &1242691451346720007
@@ -4938,7 +4938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b37bf9c9398e4c816fa33c746de1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2981941317586689741}
   minSpeed: 3
   maxSpeed: 5
   jumpForce: 8
@@ -5299,7 +5299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b37bf9c9398e4c816fa33c746de1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2981941317586689741}
   minSpeed: 3
   maxSpeed: 5
   jumpForce: 8
@@ -6148,7 +6148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b37bf9c9398e4c816fa33c746de1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2981941317586689741}
   minSpeed: 3
   maxSpeed: 5
   jumpForce: 8
@@ -10608,7 +10608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c9491591a7d94ea360b15b25d1224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 10
   attackRange: 2
   attackCooldown: 1
 --- !u!114 &5993617680467812858
@@ -10870,7 +10870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b37bf9c9398e4c816fa33c746de1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2981941317586689741}
   minSpeed: 3
   maxSpeed: 5
   jumpForce: 8
@@ -11156,7 +11156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b37bf9c9398e4c816fa33c746de1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2981941317586689741}
   minSpeed: 3
   maxSpeed: 5
   jumpForce: 8
@@ -11899,7 +11899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c9491591a7d94ea360b15b25d1224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 10
   attackRange: 2
   attackCooldown: 1
 --- !u!50 &7220700233098900672
@@ -12655,7 +12655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c9491591a7d94ea360b15b25d1224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 10
   attackRange: 2
   attackCooldown: 1
 --- !u!223 &7871360281051599097
@@ -12762,7 +12762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c9491591a7d94ea360b15b25d1224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 10
   attackRange: 2
   attackCooldown: 1
 --- !u!224 &7999253188688466100
@@ -14107,7 +14107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b37bf9c9398e4c816fa33c746de1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2981941317586689741}
   minSpeed: 3
   maxSpeed: 5
   jumpForce: 8
