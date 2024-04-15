@@ -702,7 +702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "DEAD C\u0130TY MARATHON"
+  m_text: DEAD CITY MARATHON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c6459511d7f2f4881e78f17a847759, type: 2}
   m_sharedMaterial: {fileID: 6347501016486303540, guid: 78c6459511d7f2f4881e78f17a847759, type: 2}
