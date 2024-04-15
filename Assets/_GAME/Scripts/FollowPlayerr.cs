@@ -48,7 +48,16 @@ public class FollowPlayers : MonoBehaviour
         // Düþmaný hedefe doðru hareket ettir
         transform.position = Vector2.MoveTowards(transform.position, target.position, currentSpeed * Time.deltaTime);
 
-        
+        if (transform.position.x < target.position.x)
+        {
+            spriteRenderer.flipX = false; // Hedefin saðýnda ise sprite'ý çevir
+        }
+        else
+        {
+            spriteRenderer.flipX = true; // Hedefin solunda ise sprite'ý çevirme
+        }
+
+
     }
 
     // Zýplama fonksiyonu
